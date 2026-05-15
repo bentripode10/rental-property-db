@@ -10,8 +10,8 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co'   // ← replace this
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE'               // ← replace this
+const SUPABASE_URL = 'https://ekrzgzxnfhcxfcfqestv.supabase.co'   // ← replace this
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrcnpnenhuZmhjeGZjZnFlc3R2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMTU1NjYsImV4cCI6MjA5MzU5MTU2Nn0.v2dyjGfsaWWkA_p0WdETCgbZWLenaHm1qDuyUbV5D5M'               // ← replace this
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
