@@ -7,13 +7,14 @@ import LoginPage          from './pages/LoginPage'
 import Layout             from './components/Layout'
 import PortfolioDashboard from './pages/PortfolioDashboard'
 import PropertiesPage     from './pages/PropertiesPage'
+import TenantsPage        from './pages/TenantsPage'
+import LeasesPage         from './pages/LeasesPage'
 import {
-  PropertyDetail, TenantsPage, LeasesPage, FinancialsPage,
-  ReconciliationPage, DepreciationPage, PropertyTaxPage,
-  InsurancePage, ListingsPage, ReportsPage,
+  PropertyDetail, FinancialsPage, ReconciliationPage,
+  DepreciationPage, PropertyTaxPage, InsurancePage,
+  ListingsPage, ReportsPage,
 } from './pages/stubs'
 
-// Protected route wrapper
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth()
   if (loading) return <div className="loading-screen">Loading…</div>
@@ -27,7 +28,6 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-
           <Route path="/" element={
             <ProtectedRoute>
               <Layout />
@@ -46,7 +46,6 @@ export default function App() {
             <Route path="listings"        element={<ListingsPage />} />
             <Route path="reports"         element={<ReportsPage />} />
           </Route>
-
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
